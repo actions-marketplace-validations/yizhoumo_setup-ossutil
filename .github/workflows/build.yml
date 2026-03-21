@@ -21,7 +21,7 @@ jobs:
         fi
       id: diff
     - name: upload the expected dist
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v7
       if: ${{ failure() && steps.diff.conclusion == 'failure' }}
       with:
         name: dist
